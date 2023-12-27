@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { format } from "date-fns";
 
 const posts = await getCollection("blog");
 ---
@@ -14,6 +15,7 @@ const posts = await getCollection("blog");
               <span>{post.data.title}</span>
             </a>
           </h2>
+          <span>{format(post.data.created, 'Y/M/d')}</span>
         </li>
       ))
     }
@@ -34,5 +36,6 @@ const posts = await getCollection("blog");
 
   h2 {
     font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 </style>

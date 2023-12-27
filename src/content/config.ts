@@ -5,6 +5,7 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     tags: z.array(z.string()),
+    created: z.coerce.date(),
   }),
 });
 
