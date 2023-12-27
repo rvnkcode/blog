@@ -1,16 +1,9 @@
 ---
-import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="ko-KR">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>BREAK OF DAWN</title>
-  </head>
-  <body>
-    <Header />
-  </body>
-</html>
+<BaseLayout title={"BREAK OF DAWN"}>
+  <section>
+    <p>test</p>
+  </section>
+</BaseLayout>
