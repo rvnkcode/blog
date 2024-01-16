@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:astro/recommended",
+  ],
   overrides: [
     {
       env: {
@@ -14,6 +18,14 @@ module.exports = {
         sourceType: "script",
       },
     },
+    {
+      files: ["*.astro"],
+      parser: "astro-eslint-parser",
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"],
+      },
+    },
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -22,4 +34,5 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   rules: {},
+  root: true,
 };
