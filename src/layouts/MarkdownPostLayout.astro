@@ -4,3 +4,9 @@ const { frontmatter } = Astro.props;
 
 <h2>{frontmatter.title}</h2>
 <slot />
+
+<style>
+  h2 {
+    margin: 0;
+  }
+</style>

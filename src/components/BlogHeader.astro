@@ -2,7 +2,6 @@
 import { config } from "../config";
 ---
 
-<!-- TODO: Sticky header -->
 <header>
   <h1>
     <a href="/">{config.siteTitle}</a>
@@ -10,3 +9,21 @@ import { config } from "../config";
   <p>ADHD 레즈비앙뜨 왜노자 프레임워커</p>
   <!-- TODO: Implement search -->
 </header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>
