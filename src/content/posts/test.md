@@ -1,5 +1,6 @@
 ---
 title: Markdown Test
+tags: ["test", "markdown"]
 ---
 
 ## h2 Heading
