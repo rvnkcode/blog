@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostList from "../components/PostList.astro";
 import { config } from "../config";
+import TagList from "../components/TagList.astro";
 ---
 
 <BaseLayout title={config.siteTitle}>
@@ -9,6 +10,7 @@ import { config } from "../config";
   <PostList />
   <h2>카테고리</h2>
   <h2>태그</h2>
+  <TagList />
   <!-- TODO: Add copyright -->
 </BaseLayout>
 
